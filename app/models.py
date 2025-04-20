@@ -1,11 +1,16 @@
-from sqlalchemy import Column, Integer, String, ForeignKey, Text, Boolean
+from sqlalchemy import Column, Integer, String, ForeignKey, Text, Boolean, create_engine
 from sqlalchemy.orm import relationship
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 from datetime import datetime
+
+
+db_url = "sqlite:///database.db"  # Użyj lokalnej bazy danych SQLite do testów
+
+
+engine = create_engine(db_url)
 
 # Podstawowy obiekt bazowy
 Base = declarative_base()
-
 # Definicja modelu dla aktywności (Activity)
 class Activity(Base):
     __tablename__ = 'activities'
