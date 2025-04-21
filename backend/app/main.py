@@ -1,5 +1,6 @@
-from fastapi import FastAPI, HTTPException
-from app.routers import activities
+from fastapi import FastAPI
+from backend.app.routers import activities
+
 # import requests
 
 app = FastAPI()
