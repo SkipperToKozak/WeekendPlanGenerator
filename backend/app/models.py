@@ -4,7 +4,7 @@ from sqlalchemy.orm import declarative_base
 from datetime import datetime
 
 
-db_url = "sqlite:///database.db"  # Użyj lokalnej bazy danych SQLite do testów
+db_url = "sqlite:///backend/database.db"  # Użyj lokalnej bazy danych SQLite do testów
 
 
 engine = create_engine(db_url)
@@ -15,7 +15,7 @@ Base = declarative_base()
 class Activity(Base):
     __tablename__ = 'activities'
 
-    id = Column(Integer, primary_key=True, index=True)
+    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     title = Column(String, index=True)        # Nazwa aktywności
     description = Column(Text)                # Opis aktywności
     category = Column(String)                 # Kategoria (np. 'aktywny', 'relaks')

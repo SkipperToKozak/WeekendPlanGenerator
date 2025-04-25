@@ -1,9 +1,9 @@
 import React from "react";
 import Tile from "./components/Tile";
 
-const categories = ["Sport", "Kultura", "Relaks", "Podróże"];
-const budgets = ["Niski", "Średni", "Duży", "Dowolny"];
-const weatherOptions = ["Słonecznie", "Deszczowo", "Wewnątrz", "Dowolna"];
+const categories = ["sports", "culture", "relax", "travels"];
+const budgets = ["low", "medium", "high", "any"];
+const weatherOptions = ["sunny", "rainy", "interior", "any"];
 
 const FilterSection = ({ filters, setFilters, onSearch }) => {
   const handleFilterClick = (type, value) => {
